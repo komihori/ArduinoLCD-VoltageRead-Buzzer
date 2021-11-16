@@ -29,7 +29,10 @@ void loop() {
   Serial.println("");
   /*---------------------*/
   lcd.clear();          //LCDをクリアしてカーソル位置を初期化
-  lcd.setCursor(0, 0);  //カーソルを左上にセット
+  lcd.setCursor(4, 1);  //カーソルを左下４文字目にセット
+  lcd.print("vo : ");   //LCDへ出力
+  lcd.print(vo);        //LCDへ出力
+  lcd.setCursor(0,0);   //カーソルを左上にセット
   if(vo > 2.5f){
     lcd.print("Hello World !!");  //LCDへ出力
     _playSound();
